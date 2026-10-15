@@ -78,3 +78,10 @@ docs/                                    design notes, testing checklist, Nexus 
 ## License
 
 MIT (code and text in this repository). See [LICENSE](LICENSE).
+
+## Support
+
+Donations are optional. Nothing in the mod is gated on them.
+
+- GitHub Sponsors: https://github.com/sponsors/synthalorian
+- Ko-fi: https://ko-fi.com/synthalorian
