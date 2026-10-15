@@ -1,3 +1,5 @@
+![blackshield-codex](.github/preview.png)
+
 # Blackshield Codex
 
 An optional **integration plugin** for Skyrim Special Edition that ties together the five first-wave mods of the series: [Blackshield Company](https://github.com/synthalorian/blackshield-company), [Bounties of Oblivion](https://github.com/synthalorian/bounties-of-oblivion), [Contract Hunter](https://github.com/synthalorian/contract-hunter), [Steel Oath](https://github.com/synthalorian/steel-oath) and [Ember Smithing](https://github.com/synthalorian/ember-smithing). Each of those works on its own; the Codex makes them notice each other.
