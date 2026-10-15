@@ -64,5 +64,5 @@ jobs:
           dotnet-version: "9.0.x"
       - name: Packaging dry-run
         run: |
-          sudo apt-get install -y -qq libxml2-utils >/dev/null
+          sudo apt-get update -qq && sudo apt-get install -y -qq libxml2-utils >/dev/null
           DIST_DIR="$RUNNER_TEMP/dist" ./build.sh
