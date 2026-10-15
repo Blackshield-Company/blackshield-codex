@@ -58,7 +58,7 @@ jobs:
       - name: Check README and LICENSE exist
         run: |
           ls README* >/dev/null 2>&1 || { echo "::error::README missing"; exit 1; }
-          ls LICENSE* COPYING* >/dev/null 2>&1 || { echo "::error::LICENSE missing"; exit 1; }
+          ls -d LICENSE* COPYING* 2>/dev/null | grep -q . || { echo "::error::LICENSE missing"; exit 1; }
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: "9.0.x"
