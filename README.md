@@ -94,3 +94,5 @@ Donations are optional. Nothing in the mod is gated on them.
 
 - GitHub Sponsors: https://github.com/sponsors/synthalorian
 - Ko-fi: https://ko-fi.com/synthalorian
+
+<p><img src="docs/knight-a.gif" width="64" height="56" alt="Knight A, the Blackshield Company mascot"><br><sub>A <a href="https://github.com/Blackshield-Company">Blackshield Company</a> mod.</sub></p>
