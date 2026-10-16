@@ -230,6 +230,9 @@ public static class PluginValidator
         foreach (var stale in unusedExpected.OrderBy(x => x))
             warnings.Add($"expected-unfilled entry '{stale}' does not match an unfilled property (stale?)");
 
+        // <Global=X> text tags: registered on the owning quest, never in NPC responses (see TextGlobals).
+        errors.AddRange(TextGlobals.Check(mod));
+
         // Message boxes: the engine shows at most 10 buttons.
         foreach (var m in mod.Messages)
             if (m.MenuButtons.Count > 10) errors.Add($"{m.EditorID}: {m.MenuButtons.Count} buttons (max 10)");

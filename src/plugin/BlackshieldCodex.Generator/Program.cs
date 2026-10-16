@@ -39,6 +39,9 @@ internal static class Program
         var mod = new SkyrimMod(modKey, Release);
         var builder = new Builder(mod, ids, masters);
         builder.Build();
+        // Every <Global=X> in quest-owned text goes into its quest's Text Display Globals.
+        var textGlobals = TextGlobals.Register(mod);
+        Console.WriteLine($"[generate] text display globals: {textGlobals} registered from text tags");
 
         mod.ModHeader.Flags |= SkyrimModHeader.HeaderFlag.Small; // ESL-flagged ESP
         mod.ModHeader.Stats.Version = 1.7f;
