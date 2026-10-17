@@ -1,0 +1,73 @@
+name: Bug report
+description: Something in the mod is broken or behaves unexpectedly
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for the report. The more of this you fill in, the faster it gets fixed.
+  - type: input
+    id: mod-version
+    attributes:
+      label: Mod version
+      description: Release or archive name you installed.
+      placeholder: e.g. 1.2.0
+    validations:
+      required: true
+  - type: dropdown
+    id: game-version
+    attributes:
+      label: Game version
+      options:
+        - Special Edition (SE, 1.5.97)
+        - Anniversary Edition (AE, 1.6.x)
+        - Not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: mod-manager
+    attributes:
+      label: Mod manager
+      options:
+        - Mod Organizer 2
+        - Vortex
+        - Manual install
+        - Other (say below)
+    validations:
+      required: true
+  - type: textarea
+    id: load-order
+    attributes:
+      label: Load order
+      description: Paste your plugins.txt or the load order exported from your mod manager.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: other-mods
+    attributes:
+      label: Other mods involved
+      description: Mods you suspect are interacting with this one (overhauls, patches, follower or quest mods).
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead. Papyrus logs or crash logs help a lot.
+    validations:
+      required: true
