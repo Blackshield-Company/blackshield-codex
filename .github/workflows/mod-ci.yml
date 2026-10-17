@@ -1,0 +1,17 @@
+name: Mod CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mod-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  mod-ci:
+    uses: Blackshield-Company/.github/.github/workflows/mod-ci.yml@main
