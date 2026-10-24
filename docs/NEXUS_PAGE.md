@@ -76,7 +76,7 @@ Items you made stay in your save as long as the plugin is installed. As with any
 [/list]
 
 [size=4][b]Source[/b][/size]
-Open source (MIT): [url=https://github.com/synthalorian/blackshield-codex]github.com/synthalorian/blackshield-codex[/url]
+Open source (MIT): [url=https://github.com/Blackshield-Company/blackshield-codex]github.com/Blackshield-Company/blackshield-codex[/url]
 
 [size=4][b]Credits[/b][/size]
 [list]
