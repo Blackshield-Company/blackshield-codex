@@ -2,7 +2,7 @@
 
 # Blackshield Codex
 
-An optional **integration plugin** for Skyrim Special Edition that ties together the five first-wave mods of the series: [Blackshield Company](https://github.com/synthalorian/blackshield-company), [Bounties of Oblivion](https://github.com/synthalorian/bounties-of-oblivion), [Contract Hunter](https://github.com/synthalorian/contract-hunter), [Steel Oath](https://github.com/synthalorian/steel-oath) and [Ember Smithing](https://github.com/synthalorian/ember-smithing). Each of those works on its own; the Codex makes them notice each other.
+An optional **integration plugin** for Skyrim Special Edition that ties together the five first-wave mods of the series: [Blackshield Company](https://github.com/Blackshield-Company/blackshield-company), [Bounties of Oblivion](https://github.com/Blackshield-Company/bounties-of-oblivion), [Contract Hunter](https://github.com/Blackshield-Company/contract-hunter), [Steel Oath](https://github.com/Blackshield-Company/steel-oath) and [Ember Smithing](https://github.com/Blackshield-Company/ember-smithing). Each of those works on its own; the Codex makes them notice each other.
 
 **Status: v0.1.0, early beta.** It passes every automated check in the build (Papyrus compile against the first-wave scripts, plugin validation with every link into the five masters resolved by FormID and type, byte-exact round trip, SEQ check, FOMOD schema, cross-mod compatibility check) but has not been playtested in-game yet. Expect rough edges and please report what you find. See [docs/TESTING.md](docs/TESTING.md).
 
@@ -14,7 +14,7 @@ An optional **integration plugin** for Skyrim Special Edition that ties together
 ## Install
 
 1. Install and enable all five required first-wave mods listed above (0.1.0 or later). The Codex cannot load without their plugins.
-2. Download the mod zip from [Releases](https://github.com/synthalorian/blackshield-codex/releases), or build it from source as described below. GitHub's source-code archives are not installable mod packages.
+2. Download the mod zip from [Releases](https://github.com/Blackshield-Company/blackshield-codex/releases), or build it from source as described below. GitHub's source-code archives are not installable mod packages.
 3. In Mod Organizer 2 or Vortex, install the zip through its FOMOD installer and enable `BlackshieldCodex.esp`. The Papyrus source files option is only for development; players can skip it.
 4. For a manual install, copy the **contents** of `00 Core/` into Skyrim Special Edition's `Data/` directory, preserving `Scripts/` and `SEQ/`, and enable `BlackshieldCodex.esp` in your plugin list. Do not copy the enclosing `00 Core` folder itself.
 5. Load `BlackshieldCodex.esp` **after** `BlackshieldCompany.esp`, `BountiesOfOblivion.esp`, `ContractHunter.esp`, `SteelOath.esp` and `EmberSmithing.esp`. The vendored files in this repository's `masters/` directory are build inputs, not a replacement for installing those mods.

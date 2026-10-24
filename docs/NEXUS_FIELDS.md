@@ -40,4 +40,4 @@ Permissions (suggestion; code is MIT on GitHub):
 Tags (pick the closest matches in the tag picker):
 Gameplay, Crafting, Smithing, Factions, Daedric, ESL, No SKSE, Scripted, Patch
 
-Source: https://github.com/synthalorian/blackshield-codex
+Source: https://github.com/Blackshield-Company/blackshield-codex

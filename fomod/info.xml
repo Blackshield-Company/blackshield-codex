@@ -3,7 +3,7 @@
   <Name>Blackshield Codex</Name>
   <Author>synthalorian</Author>
   <Version>@VERSION@</Version>
-  <Website>https://github.com/synthalorian/blackshield-codex</Website>
+  <Website>https://github.com/Blackshield-Company/blackshield-codex</Website>
   <Description>Optional links between Blackshield Company, Bounties of Oblivion, Contract Hunter, Steel Oath and Ember Smithing: kept oaths earn company renown, Daedric favor sweetens bounties, and the forge can heat-temper and engrave Blackshield gear. Requires all five. Base game only, no SKSE. Early beta.</Description>
   <Groups>
     <element>Gameplay</element>
