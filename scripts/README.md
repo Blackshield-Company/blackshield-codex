@@ -36,3 +36,21 @@ This file and `verify-release.sh` are identical copies of the canonical ones in
 `scripts/verify-release.sh`). Edit them there, then re-sync every mod repo. The CI drift step
 warns when the copy here differs from the canonical script. Full documentation:
 `docs/verify-release.md` in synthalorian/.github.
+
+## Cross-repo collision check
+
+`collisions-ci.sh` runs in CI through `.github/workflows/mod-collisions.yml` on every push to
+main and pull request. It builds this repo's release zip, downloads the latest published
+release of each of the other Blackshield mods with `gh release download`, and runs
+`verify-release.sh --collisions` over the set, with this build standing in for this repo's own
+release. It fails on any script name, EditorID, plugin name, voice folder or SEQ file in this
+package that also appears in a sibling release. A sibling with no published release is skipped
+with a notice (the job summary lists which siblings were compared) and never fails the run;
+collisions between two siblings are reported as warnings only.
+
+```
+./build.sh && GH_TOKEN=$(gh auth token) ./scripts/collisions-ci.sh --dist dist --repo Blackshield-Company/<this-repo>
+```
+
+The sibling list is the `DEFAULT_SIBLINGS` variable in the script (override with
+`COLLISION_SIBLINGS`); add a new mod there. The same file is copied into every mod repo.
