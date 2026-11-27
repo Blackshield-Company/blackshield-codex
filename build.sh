@@ -45,6 +45,16 @@ python3 "$KIT/esp_check.py" "$BUILD/plugin/$NAME.esp"
 # plugin + SEQ/
 cp -r "$BUILD/plugin/." "$STAGE/00 Core/"
 
+# Lowercase the Data folders the game opens by lowercase name: scripts, seq, sound/voice
+# (and the rest of sound/). On Linux (Proton) the lookup prefers an exact-case folder, so a
+# mod manager that deploys our "Scripts" next to another mod's "scripts" leaves ours unread.
+for opt in "$STAGE"/*/; do
+  if [[ -d "${opt}Scripts" ]]; then mv "${opt}Scripts" "${opt}scripts"; fi
+  if [[ -d "${opt}SEQ" ]]; then mv "${opt}SEQ" "${opt}seq"; fi
+  if [[ -d "${opt}Sound" ]]; then mv "${opt}Sound" "${opt}sound"; fi
+  if [[ -d "${opt}sound/Voice" ]]; then mv "${opt}sound/Voice" "${opt}sound/voice"; fi
+done
+
 echo "== FOMOD"
 ARCHIVE="$DIST_DIR/$NAME-$VERSION.zip"
 python3 "$KIT/fomod/pack.py" --fomod fomod --stage "$STAGE" --version "$VERSION" --out "$ARCHIVE"
